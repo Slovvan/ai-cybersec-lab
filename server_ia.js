@@ -117,8 +117,7 @@ oaepHash: 'sha256'
 },
 Buffer.from(encryptedSessionKey, 'base64')
 );
-// 2. Descifrar el payload con AES-256-GCM y validar etiqueta de integridad
-(AuthTag)
+// 2. Descifrar el payload con AES-256-GCM y validar etiqueta de integridad(AuthTag)
 const decipher = crypto.createDecipheriv(
 'aes-256-gcm',
 aesSessionKey,
